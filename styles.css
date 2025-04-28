@@ -1,0 +1,332 @@
+div[data-testid='stForm'] {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Add Expense button */
+button[kind='secondaryFormSubmit'] {
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50 !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button[kind='secondaryFormSubmit']:hover {
+  background-color: #70dd76ea !important;
+}
+
+/* delete button in Select by row */
+.st-key-delRowBtn button {
+  background-color: rgb(237, 133, 133);
+  color: #ffffff;
+  height: 50px;
+  border-radius: 20px;
+}
+.st-key-delRowBtn button:hover {
+  color: black;
+  background-color: red;
+  scale: 1.05;
+  font-weight: bold;
+}
+.st-key-delRowBtn {
+  margin-top: 20px;
+}
+
+/* delete by row section */
+.st-key-delRowContainer {
+  display: block;
+  margin: 0 auto;
+  background-color: #ece7e7;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+.st-key-delRowContainer h5 {
+  color: #464e55;
+  text-align: center;
+}
+
+/* filter section */
+.st-key-filterContainer {
+  display: block;
+  margin: 0 auto;
+  background-color: #d6edf2;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+.st-key-filterContainer h5 {
+  color: #464e55;
+  text-align: center;
+  margin-bottom: 30px;
+}
+st-key-filterContainer div {
+  margin-top: 50px;
+}
+/* multi select boxes in filter section */
+.st-key-filterContainer div[data-testid='stMultiSelect'] {
+  margin-bottom: 30px;
+}
+.st-key-filterContainer div[data-testid='stDateInput'] {
+  margin-bottom: 30px;
+}
+
+/* output Expenses section */
+/* Fix output table style */
+.st-key-outputContainer {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 30px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+.st-key-outputContainer h4 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.st-key-outputContainer h3 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Target all delete buttons by key */
+[class*='delete_'] button {
+  all: unset; /* 💥 reset all default styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+}
+
+[class*='delete_'] button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+  font-weight: bold;
+  color: #fff;
+}
+/* Edit buttons */
+[class*='edit_'] button {
+  all: unset; /* 💥 reset all default styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  background-color: #2dec59;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+}
+
+[class*='edit_'] button:hover {
+  background-color: #7bd32f;
+  transform: scale(1.05);
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Downlaod Section */
+.st-key-downloadFiles {
+  display: flex;
+  align-items: center;
+}
+.st-key-downloadFiles button {
+  margin: 20px 40px;
+  padding: 20px;
+  width: 200px;
+}
+
+/* sort section */
+.st-key-sortSection {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 30px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(60, 58, 58);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+/* Edit section */
+.st-key-editContainer {
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+
+/* Edit button in Select by row */
+.st-key-editRowBtn button {
+  background-color: rgb(36, 232, 196);
+  color: #ffffff;
+  height: 50px;
+  border-radius: 20px;
+}
+.st-key-editRowBtn button:hover {
+  color: black;
+  background-color: rgb(0, 128, 124);
+  scale: 1.05;
+  font-weight: bold;
+}
+.st-key-editRowBtn {
+  margin-top: 20px;
+}
+
+/* Add or Remove Category Section */
+.st-key-add-remove-category {
+  display: flex;
+  gap: 10px;
+}
+.st-key-add-remove-category h5 {
+  text-align: center;
+}
+.st-key-add-remove-category div[data-testid='stTextInput'],
+.st-key-add-remove-category div[data-testid='stSelectbox'] {
+  flex: 4;
+}
+.st-key-add-remove-category button {
+  margin-top: 25px;
+  width: 5rem;
+  height: 2rem;
+}
+.st-key-add-category,
+.st-key-remove-category {
+  flex: 1;
+}
+.st-key-remove-category button {
+  background-color: rgb(248, 222, 222);
+}
+.st-key-remove-category button:hover {
+  background-color: rgb(250, 52, 52);
+  border: none;
+  color: white;
+}
+.st-key-add-category button {
+  background-color: rgb(184, 244, 184);
+}
+.st-key-add-category button:hover {
+  background-color: rgb(49, 132, 49);
+  border: none;
+  color: white;
+}
+
+/* Modal */
+
+/* change modal position */
+div[data-modal-container='true'][key='edit-modal'] {
+  top: 0;
+}
+
+/* modal close buttons */
+.st-key-edit-modal-close button {
+  background-color: rgb(233, 175, 175);
+  border: none;
+  width: 20px;
+  height: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: medium;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.st-key-edit-modal-close button:hover {
+  background-color: red;
+  color: white !important;
+}
+
+/* blur background */
+div[data-modal-container='true'][key='edit-modal']::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* get the modal to the center */
+div[data-modal-container='true'][key='edit-modal'] > div:first-child {
+  margin: auto;
+  max-width: 600px !important;
+}
+
+/* modal popup */
+div[data-modal-container='true'][key='edit-modal']
+  > div:first-child
+  > div:first-child {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  position: relative;
+  margin-top: 2rem;
+}
+div[data-modal-container='true'][key='edit-modal']
+  .st-key-edit-modal-close
+  button:hover {
+  color: #000000;
+}
+
+/* inputs */
+div[data-modal-container='true'][key='edit-modal'] .stDateInput,
+div[data-modal-container='true'][key='edit-modal'] .stSelectbox,
+div[data-modal-container='true'][key='edit-modal'] .stNumberInput,
+div[data-modal-container='true'][key='edit-modal'] .stTextInput {
+  margin-bottom: 1rem;
+}
+div[data-modal-container='true'][key='edit-modal'] input {
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+/* Save and Cancel Buttons */
+div[data-modal-container='true'][key='edit-modal'] .st-key-save-btn button {
+  background-color: #4caf50 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+}
+div[data-modal-container='true'][key='edit-modal']
+  .st-key-save-btn
+  button:hover {
+  background-color: #45a049 !important;
+}
+
+div[data-modal-container='true'][key='edit-modal'] .st-key-cancel-btn button {
+  background-color: #f44336 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+}
+div[data-modal-container='true'][key='edit-modal']
+  .st-key-cancel-btn
+  button:hover {
+  background-color: #e53935 !important;
+}
