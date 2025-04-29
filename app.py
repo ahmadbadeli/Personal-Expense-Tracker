@@ -207,18 +207,19 @@ if not df.empty:
     # Expenses Table
     delContainer = st.empty()
     editContainer = st.container()
+    # sory by Category view
     if sort_by == "Category":
         st.markdown("#### Your Expenses")
         grouped = df.groupby("Category")
 
         for category, group in grouped:
             with st.expander(f"{category} ({len(group)} items)", expanded=True):
-                # نمایش عنوان ستون‌ها
+                # Column headers
                 cols = st.columns([2, 2, 3, 1])
                 headers = ["Date", "Amount", "Note", "Delete"]
                 writeColumns(cols,*headers)
                 
-                # نمایش سطرهای این گروه
+                # Rows
                 for i, row in group.iterrows():
                     cols = st.columns([2, 2, 2, 1,1])
                     writeColumns(cols[0:3],row["Date"],f"${row['Amount']:.2f}",row["Note"],mode=1)
@@ -235,9 +236,8 @@ if not df.empty:
                         delRow(df, delete_index, delContainer, is_filtered, original_df)
                         st.session_state.pop(delete_key, None)
                         st.rerun(scope="app")
-                        # No rerun needed if on_click is handled properly
+
                     # Edit Function"                         
-                    # وقتی کاربر روی دکمهٔ Edit_[i] کلیک می‌کند:
                     if st.session_state.get(edit_key):
                         st.session_state.modal_row_idx = i
                         st.session_state["edit-modal-opened"] = True
@@ -270,9 +270,8 @@ if not df.empty:
                     delRow(df, delete_index, delContainer, is_filtered, original_df)
                     st.session_state.pop(delete_key, None)
                     st.rerun(scope="app")
-                    # No rerun needed if on_click is handled properly
+                   
                 # Edit Function"                         
-                # وقتی کاربر روی دکمهٔ Edit_[i] کلیک می‌کند:
                 if st.session_state.get(edit_key):
                     st.session_state.modal_row_idx = i
                     st.session_state["edit-modal-opened"] = True
