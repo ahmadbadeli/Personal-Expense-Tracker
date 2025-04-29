@@ -39,7 +39,12 @@ else:
     categories_df = pd.DataFrame({"Categories":["Food","Transport","Utilities","Other"]})
     categories = list(categories_df["Categories"])
     categories_df.to_csv(categories_path)
-    
+
+# Check Data Frame with new categories
+indices_not_in_categories = [i for i, item in enumerate(list(df["Category"])) if item not in categories]
+if indices_not_in_categories:
+    df = df.drop(indices_not_in_categories,axis=0)
+    df.to_csv(file_path,index=False)   
 
 # Add Expense Form
 with st.form(key="myForm"):
@@ -93,8 +98,7 @@ with st.expander("Add or Remove a Category"):
                     categories.remove(selected_category)
                     saveCategoriesDf(categories,msg)
                 else:
-                    tempMsg(msg,"There is only 1 category left. If you want to delete this category please add another one",mode=1)
-            
+                    tempMsg(msg,"There is only 1 category left. If you want to delete this category please add another one",mode=1)       
 
 # Filter Section
 if not df.empty:  
