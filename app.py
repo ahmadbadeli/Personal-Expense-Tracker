@@ -89,8 +89,11 @@ with st.expander("Add or Remove a Category"):
             selected_category = st.selectbox("Select a Category",options=categories)
         with cols[3]:
             if st.button("Delete",key="remove-category"):
-                categories.remove(selected_category)
-                saveCategoriesDf(categories,msg)
+                if len(categories) > 1:
+                    categories.remove(selected_category)
+                    saveCategoriesDf(categories,msg)
+                else:
+                    tempMsg(msg,"There is only 1 category left. If you want to delete this category please add another one",mode=1)
             
 
 # Filter Section
