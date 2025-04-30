@@ -97,7 +97,6 @@ def openModal(df, index, modal, is_filtered, original_df, categories):
     
         col1, col2 = st.columns(2)
 
-        print(st.session_state)
         with st.container(key="modal-buttons"):
             with col1:
                 if st.button("Save", key="save-btn"):
